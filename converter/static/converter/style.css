@@ -1,0 +1,70 @@
+    body {
+        font-family: Centaur;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url("https://img.freepik.com/free-photo/dollar-banknotes-frame_1150-6686.jpg?w=2000");
+        background-size: cover;
+    }
+
+    .container {
+        width: 400px;
+        height: 400px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Bv9bai9J6NhENQ8o6S626vKiSuaevQszhg&usqp=CAU");
+        background-size: cover;
+        border: 1px solid #000;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: black;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    select, input[type="number"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .amount {
+        margin-bottom: 0;
+        text-align: center;
+        color: black;
+    }

@@ -1,0 +1,106 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert Currency</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'converter/style.css' %}">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1790/1790213.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="{% url 'convert_currency' %}">
+            {% csrf_token %}
+
+            <div class="center-div">
+                <div class="amount">
+                    <h4>Exchange Rate</h4>
+                    <h3 style="color: dodgerblue">{{ converted_amount|floatformat:2 }} {{ target_currency }}</h3>
+                </div>
+                <h2>Convert Currency</h2>
+
+                <div class="form-group">
+                    <select name="base_currency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="UZS">UZS</option>
+                        <option value="KZT">KZT</option>
+                        <option value="RUB">RUB</option>
+                        <option value="GBP">GBP</option>
+                        <option value="CHF">CHF</option>
+                        <option value="JPY">JPY</option>
+                        <option value="AUD">AUD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CNY">CNY</option>
+                        <option value="DKK">DKK</option>
+                        <option value="EGP">EGP</option>
+                        <option value="ISK">ISK</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KWD">KWD</option>
+                        <option value="LBP">LBP</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="PLN">PLN</option>
+                        <option value="TRY">TRY</option>
+                        <option value="UAH">UAH</option>
+                        <option value="PKR">PKR</option>
+                        <option value="IQD">IQD</option>
+                        <option value="MAD">MAD</option>
+                        <option value="SAR">SAR</option>
+                        <option value="MXN">MXN</option>
+                        <option value="LAK">LAK</option>
+                        <option value="ZAR">ZAR</option>
+                        <option value="HKD">HKD</option>
+                        <!-- Add other currency options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select name="target_currency">
+                        <option value="UZS">UZS</option>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="KZT">KZT</option>
+                        <option value="RUB">RUB</option>
+                        <option value="GBP">GBP</option>
+                        <option value="CHF">CHF</option>
+                        <option value="JPY">JPY</option>
+                        <option value="AUD">AUD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CNY">CNY</option>
+                        <option value="DKK">DKK</option>
+                        <option value="EGP">EGP</option>
+                        <option value="ISK">ISK</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KWD">KWD</option>
+                        <option value="LBP">LBP</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="PLN">PLN</option>
+                        <option value="TRY">TRY</option>
+                        <option value="UAH">UAH</option>
+                        <option value="PKR">PKR</option>
+                        <option value="IQD">IQD</option>
+                        <option value="MAD">MAD</option>
+                        <option value="SAR">SAR</option>
+                        <option value="MXN">MXN</option>
+                        <option value="LAK">LAK</option>
+                        <option value="ZAR">ZAR</option>
+                        <option value="HKD">HKD</option>
+                        <!-- Add other currency options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount" style="color: black">Amount:</label>
+                    <input type="number" name="amount" required>
+                </div>
+
+                <button type="submit">Convert</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
